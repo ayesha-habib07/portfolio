@@ -93,7 +93,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 relative" ref={ref}>
+    <section id="contact" className="py-16 sm:py-20 px-4 sm:px-6 relative" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
@@ -115,8 +115,8 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="card-gradient rounded-2xl p-8 border border-[rgb(var(--border))]">
-                <h3 className="text-2xl font-bold mb-6 text-gradient">
+              <div className="card-gradient rounded-2xl p-6 sm:p-8 border border-[rgb(var(--border))]">
+                <h3 className="text-xl sm:text-2xl font-bold mb-6 text-gradient">
                   Contact Information
                 </h3>
                 <div className="space-y-6">
@@ -144,11 +144,11 @@ const Contact = () => {
               </div>
 
               {/* Social Links */}
-              <div className="card-gradient rounded-2xl p-8 border border-[rgb(var(--border))]">
-                <h3 className="text-2xl font-bold mb-6 text-gradient">
+              <div className="card-gradient rounded-2xl p-6 sm:p-8 border border-[rgb(var(--border))]">
+                <h3 className="text-xl sm:text-2xl font-bold mb-6 text-gradient">
                   Connect with Me
                 </h3>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-3 sm:gap-4">
                   {socialLinks.map((social, index) => (
                     <motion.a
                       key={index}
@@ -157,11 +157,11 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, y: -5 }}
                       whileTap={{ scale: 0.95 }}
-                      className="p-4 bg-[rgb(var(--background))] rounded-xl border border-[rgb(var(--border))] hover:border-[rgb(var(--accent))] transition-all group"
+                      className="p-3 sm:p-4 bg-[rgb(var(--background))] rounded-xl border border-[rgb(var(--border))] hover:border-[rgb(var(--accent))] transition-all group"
                       title={social.label}
                     >
                       <social.icon
-                        className="w-7 h-7 text-gray-400 group-hover:text-[rgb(var(--accent))] transition-colors"
+                        className="w-6 h-6 sm:w-7 sm:h-7 text-gray-400 group-hover:text-[rgb(var(--accent))] transition-colors"
                       />
                     </motion.a>
                   ))}
@@ -171,13 +171,13 @@ const Contact = () => {
 
             {/* Call to Action Card */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="card-gradient rounded-2xl p-8 border border-[rgb(var(--border))] h-full flex flex-col justify-between relative overflow-hidden">
+              <div className="card-gradient rounded-2xl p-6 sm:p-8 border border-[rgb(var(--border))] h-full flex flex-col justify-between relative overflow-hidden">
                 {/* Background decoration */}
                 <div className="absolute -right-20 -top-20 w-60 h-60 bg-[rgb(var(--accent))]/10 rounded-full blur-3xl"></div>
                 <div className="absolute -left-20 -bottom-20 w-60 h-60 bg-emerald-400/10 rounded-full blur-3xl"></div>
 
                 <div className="relative z-10">
-                  <h3 className="text-3xl font-bold mb-4">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-4">
                     Let's Work <span className="text-gradient">Together</span>
                   </h3>
                   <p className="text-gray-300 leading-relaxed mb-8">
@@ -208,19 +208,19 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="relative z-10 mt-8 space-y-3">
+                <div className="relative z-10 mt-6 sm:mt-8 space-y-3">
                   <a
                     href="mailto:rumiasif77@gmail.com"
-                    className="block w-full py-4 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg font-semibold text-center hover:bg-[rgb(var(--accent-hover))] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[rgba(1,193,106,0.3)]"
+                    className="block w-full py-3 sm:py-4 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg text-sm sm:text-base font-semibold text-center hover:bg-[rgb(var(--accent-hover))] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[rgba(1,193,106,0.3)]"
                   >
                     Send Me an Email
                   </a>
                   <a
                     href="/cv.pdf"
                     download="Asif_Ali_CV.pdf"
-                    className="flex items-center justify-center gap-2 w-full py-4 border-2 border-[rgb(var(--accent))] text-[rgb(var(--accent))] rounded-lg font-semibold hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--background))] transition-all duration-300 hover:-translate-y-1"
+                    className="flex items-center justify-center gap-2 w-full py-3 sm:py-4 border-2 border-[rgb(var(--accent))] text-[rgb(var(--accent))] rounded-lg text-sm sm:text-base font-semibold hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--background))] transition-all duration-300 hover:-translate-y-1"
                   >
-                    <FiDownload className="w-5 h-5" />
+                    <FiDownload className="w-4 h-4 sm:w-5 sm:h-5" />
                     Download My CV
                   </a>
                 </div>
