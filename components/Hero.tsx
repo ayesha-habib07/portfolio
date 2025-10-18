@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { FiGithub, FiLinkedin, FiMail, FiDownload } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiInstagram } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Hero = () => {
@@ -83,16 +83,36 @@ const Hero = () => {
           {/* Social Links */}
           <motion.div variants={itemVariants} className="flex gap-4 pt-4">
             <a
+              href="https://github.com/rumi-asif"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
+              title="GitHub"
+            >
+              <FiGithub className="w-6 h-6 group-hover:scale-110 transition-transform" />
+            </a>
+            <a
               href="https://www.linkedin.com/in/asif-rumi-0a4010157/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
+              title="LinkedIn"
             >
               <FiLinkedin className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
+              href="https://www.instagram.com/sho0_asif/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
+              title="Instagram"
+            >
+              <FiInstagram className="w-6 h-6 group-hover:scale-110 transition-transform" />
+            </a>
+            <a
               href="mailto:rumiasif77@gmail.com"
               className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
+              title="Email"
             >
               <FiMail className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </a>
@@ -101,6 +121,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
+              title="WhatsApp"
             >
               <FaWhatsapp className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </a>

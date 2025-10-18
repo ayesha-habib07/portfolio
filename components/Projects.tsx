@@ -33,6 +33,7 @@ const projects: Project[] = [
     description:
       'Developed and maintained a full-stack CRM platform for a roofing company, integrating Supabase, Deno Edge Functions, and a modern React frontend for seamless lead and client management.',
     technologies: ['React', 'Supabase', 'Deno', 'Edge Functions', 'CRM'],
+    link: 'https://mbaroofing.com',
     image: '/images/projects/mbaroofing.jpg',
     status: 'completed',
   },
@@ -99,12 +100,12 @@ const Projects = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group"
+                className="group h-full"
               >
                 <div className="card-gradient rounded-2xl p-6 border border-[rgb(var(--border))] hover-lift h-full flex flex-col relative overflow-hidden">
                   {/* Status badge */}
                   {project.status && (
-                    <div className="absolute top-4 right-4">
+                    <div className="absolute top-4 right-4 z-20">
                       <span
                         className={`px-3 py-1 text-xs font-semibold rounded-full ${
                           project.status === 'ongoing'
@@ -120,34 +121,35 @@ const Projects = () => {
                   {/* Background decoration */}
                   <div className="absolute -right-10 -top-10 w-40 h-40 bg-[rgb(var(--accent))]/5 rounded-full blur-3xl group-hover:bg-[rgb(var(--accent))]/10 transition-all duration-500"></div>
 
-                  <div className="relative z-10">
-                    {/* Project Image */}
-                    {project.image && (
-                      <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden bg-[rgb(var(--background))]">
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                      </div>
-                    )}
-
-                    {/* Project title and period */}
-                    <div className="mb-4">
-                      <h3 className="text-2xl font-bold mb-2 group-hover:text-[rgb(var(--accent))] transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-gray-500 text-sm">{project.period}</p>
+                  {/* Project Image */}
+                  {project.image && (
+                    <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden bg-[rgb(var(--background))] z-10">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
                     </div>
+                  )}
 
-                    {/* Description */}
-                    <p className="text-gray-300 leading-relaxed mb-6 flex-grow">
-                      {project.description}
-                    </p>
+                  {/* Project title and period */}
+                  <div className="mb-4 relative z-10">
+                    <h3 className="text-2xl font-bold mb-2 group-hover:text-[rgb(var(--accent))] transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-500 text-sm">{project.period}</p>
+                  </div>
 
+                  {/* Description - grows to fill available space */}
+                  <p className="text-gray-300 leading-relaxed mb-6 flex-grow relative z-10">
+                    {project.description}
+                  </p>
+
+                  {/* Bottom section - Technologies and Link - stays at bottom */}
+                  <div className="mt-auto relative z-10">
                     {/* Technologies */}
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
@@ -160,7 +162,7 @@ const Projects = () => {
 
                     {/* Links */}
                     {project.link && (
-                      <div className="flex gap-4">
+                      <div className="flex gap-4 pt-2">
                         <a
                           href={project.link}
                           target="_blank"
