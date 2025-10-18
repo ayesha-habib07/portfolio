@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiBriefcase, FiCalendar } from 'react-icons/fi';
+import { FiBriefcase, FiMapPin, FiClock, FiTrendingUp } from 'react-icons/fi';
 
 interface ExperienceItem {
   company: string;
@@ -11,6 +11,7 @@ interface ExperienceItem {
   location: string;
   period: string;
   current?: boolean;
+  type: string;
 }
 
 const experiences: ExperienceItem[] = [
@@ -19,6 +20,7 @@ const experiences: ExperienceItem[] = [
     role: 'Full Stack Developer',
     location: 'Gilgit, Pakistan',
     period: 'Dec 2021 - Present',
+    type: 'Full-time',
     current: true,
   },
   {
@@ -26,24 +28,35 @@ const experiences: ExperienceItem[] = [
     role: 'Lead Backend Developer',
     location: 'Gilgit, Pakistan',
     period: 'Jan 2024 - May 2025',
+    type: 'Full-time',
+  },
+  {
+    company: 'QUINTUS VOYAGES',
+    role: 'Full Stack Developer',
+    location: 'Gojal Hunza, Pakistan',
+    period: 'Jan 2024 - Apr 2025',
+    type: 'Contract',
   },
   {
     company: 'GILGIT APP',
     role: 'Backend Developer',
     location: 'Gilgit, Pakistan',
     period: 'Oct 2023 - Feb 2024',
+    type: 'Contract',
   },
   {
     company: 'INVYCE.COM',
     role: 'Backend Developer',
     location: 'Gilgit, Pakistan',
     period: 'Oct 2021 - Jun 2023',
+    type: 'Contract',
   },
   {
     company: 'SKYSCRAPERS PVT LTD',
     role: 'SEO Executive',
     location: 'Islamabad, Pakistan',
     period: 'Sep 2021 - Nov 2021',
+    type: 'Full-time',
   },
 ];
 
@@ -56,95 +69,135 @@ const Experience = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.1,
       },
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, x: -30 },
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
       },
     },
   };
 
   return (
-    <section id="experience" className="py-20 px-6 relative" ref={ref}>
-      <div className="max-w-6xl mx-auto">
+    <section id="experience" className="py-20 px-6 relative overflow-hidden" ref={ref}>
+      {/* Background decoration */}
+      <div className="absolute top-1/4 -left-40 w-96 h-96 bg-[rgb(var(--accent))]/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-emerald-400/5 rounded-full blur-3xl"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={containerVariants}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center space-y-4 mb-16">
+          <motion.div variants={cardVariants} className="text-center space-y-4 mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[rgb(var(--accent))]/10 rounded-full border border-[rgb(var(--accent))]/20 mb-4">
+              <FiTrendingUp className="w-4 h-4 text-[rgb(var(--accent))]" />
+              <span className="text-[rgb(var(--accent))] text-sm font-semibold">Career Journey</span>
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold">
               Work <span className="text-gradient">Experience</span>
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[rgb(var(--accent))] to-emerald-400 mx-auto rounded-full"></div>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              {experiences.length} positions across {new Set(experiences.map(e => e.company)).size} companies, building scalable solutions
+            </p>
           </motion.div>
 
-          {/* Timeline */}
-          <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[rgb(var(--accent))] via-emerald-400 to-[rgb(var(--accent))] transform -translate-x-1/2"></div>
-
-            {/* Experience items */}
-            <div className="space-y-12">
-              {experiences.map((exp, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className={`relative flex items-center ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-                >
-                  {/* Timeline dot */}
-                  <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[rgb(var(--accent))] rounded-full border-4 border-[rgb(var(--background))] z-10 shadow-lg shadow-[rgba(1,193,106,0.3)]">
-                    {exp.current && (
-                      <span className="absolute inset-0 rounded-full bg-[rgb(var(--accent))] animate-ping"></span>
-                    )}
-                  </div>
-
-                  {/* Content card */}
-                  <div
-                    className={`w-full md:w-[calc(50%-3rem)] ml-20 md:ml-0 ${
-                      index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'
-                    }`}
-                  >
-                    <div className="card-gradient rounded-2xl p-6 border border-[rgb(var(--border))] hover-lift group">
-                      {/* Current badge */}
+          {/* Experience Grid */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                variants={cardVariants}
+                whileHover={{ y: -8 }}
+                className="group"
+              >
+                <div className="card-gradient rounded-2xl p-6 border border-[rgb(var(--border))] h-full relative overflow-hidden transition-all duration-300 hover:border-[rgb(var(--accent))]/50">
+                  {/* Background glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[rgb(var(--accent))]/0 to-[rgb(var(--accent))]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Top section with badges */}
+                  <div className="relative z-10 flex items-start justify-between mb-4">
+                    <div className="flex-1">
                       {exp.current && (
-                        <span className="inline-block px-3 py-1 bg-[rgb(var(--accent))]/20 text-[rgb(var(--accent))] text-xs font-semibold rounded-full mb-3 border border-[rgb(var(--accent))]/30">
-                          Current Position
-                        </span>
+                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-[rgb(var(--accent))]/20 text-[rgb(var(--accent))] text-xs font-bold rounded-full mb-3 border border-[rgb(var(--accent))]/30 animate-pulse">
+                          <span className="w-2 h-2 bg-[rgb(var(--accent))] rounded-full"></span>
+                          CURRENT
+                        </div>
                       )}
-
-                      <h3 className="text-xl font-bold mb-2 group-hover:text-[rgb(var(--accent))] transition-colors">
-                        {exp.role}
-                      </h3>
-
-                      <div className="flex items-center gap-2 text-gray-400 mb-2">
-                        <FiBriefcase className="w-4 h-4" />
-                        <span className="font-medium">{exp.company}</span>
-                      </div>
-
-                      <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
-                        <FiCalendar className="w-4 h-4" />
-                        <span>{exp.period}</span>
-                      </div>
-
-                      <p className="text-gray-500 text-sm">{exp.location}</p>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1 bg-[rgb(var(--background))] rounded-lg border border-[rgb(var(--border))]">
+                      <FiBriefcase className="w-3 h-3 text-[rgb(var(--accent))]" />
+                      <span className="text-xs text-gray-400">{exp.type}</span>
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
+
+                  {/* Company icon placeholder */}
+                  <div className="relative z-10 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[rgb(var(--accent))]/20 to-emerald-400/20 flex items-center justify-center border border-[rgb(var(--accent))]/30 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-xl font-bold text-[rgb(var(--accent))]">
+                        {exp.company.charAt(0)}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Job title */}
+                  <div className="relative z-10 mb-4">
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-[rgb(var(--accent))] transition-colors">
+                      {exp.role}
+                    </h3>
+                    <p className="text-gray-300 font-medium text-sm mb-1">
+                      {exp.company}
+                    </p>
+                  </div>
+
+                  {/* Details */}
+                  <div className="relative z-10 space-y-2">
+                    <div className="flex items-center gap-2 text-gray-400 text-sm">
+                      <FiClock className="w-4 h-4 text-[rgb(var(--accent))]/70" />
+                      <span>{exp.period}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-400 text-sm">
+                      <FiMapPin className="w-4 h-4 text-[rgb(var(--accent))]/70" />
+                      <span>{exp.location}</span>
+                    </div>
+                  </div>
+
+                  {/* Hover accent line */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[rgb(var(--accent))] to-emerald-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+              </motion.div>
+            ))}
           </div>
+
+          {/* Stats Section */}
+          <motion.div variants={cardVariants} className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">
+              <div className="text-3xl font-bold text-gradient mb-1">{experiences.length}</div>
+              <div className="text-sm text-gray-400">Positions</div>
+            </div>
+            <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">
+              <div className="text-3xl font-bold text-gradient mb-1">3+</div>
+              <div className="text-sm text-gray-400">Years</div>
+            </div>
+            <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">
+              <div className="text-3xl font-bold text-gradient mb-1">{new Set(experiences.map(e => e.company)).size}</div>
+              <div className="text-sm text-gray-400">Companies</div>
+            </div>
+            <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">
+              <div className="text-3xl font-bold text-gradient mb-1">100%</div>
+              <div className="text-sm text-gray-400">Dedicated</div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

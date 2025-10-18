@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiMail, FiMapPin, FiPhone, FiLinkedin } from 'react-icons/fi';
+import { FiMail, FiMapPin, FiPhone, FiLinkedin, FiGithub, FiInstagram } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
@@ -54,10 +54,22 @@ const Contact = () => {
 
   const socialLinks = [
     {
+      icon: FiGithub,
+      label: 'GitHub',
+      href: 'https://github.com/rumi-asif',
+      color: '#ffffff',
+    },
+    {
       icon: FiLinkedin,
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/asif-rumi-0a4010157/',
       color: '#0077B5',
+    },
+    {
+      icon: FiInstagram,
+      label: 'Instagram',
+      href: 'https://www.instagram.com/sho0_asif/',
+      color: '#E4405F',
     },
     {
       icon: FaWhatsapp,
