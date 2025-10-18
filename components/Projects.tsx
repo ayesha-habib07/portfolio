@@ -5,6 +5,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import Image from 'next/image';
+import ExpandableText from './ExpandableText';
 
 interface Project {
   title: string;
@@ -75,7 +76,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-6 relative" ref={ref}>
+    <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6 relative" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -102,7 +103,7 @@ const Projects = () => {
                 variants={itemVariants}
                 className="group h-full"
               >
-                <div className="card-gradient rounded-2xl p-6 border border-[rgb(var(--border))] hover-lift h-full flex flex-col relative overflow-hidden">
+                <div className="card-gradient rounded-2xl p-5 sm:p-6 border border-[rgb(var(--border))] hover-lift h-full flex flex-col relative overflow-hidden">
                   {/* Status badge */}
                   {project.status && (
                     <div className="absolute top-4 right-4 z-20">
@@ -135,16 +136,18 @@ const Projects = () => {
 
                   {/* Project title and period */}
                   <div className="mb-4 relative z-10">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-[rgb(var(--accent))] transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2 group-hover:text-[rgb(var(--accent))] transition-colors break-words">
                       {project.title}
                     </h3>
-                    <p className="text-gray-500 text-sm">{project.period}</p>
+                    <p className="text-gray-500 text-xs sm:text-sm">{project.period}</p>
                   </div>
 
                   {/* Description - grows to fill available space */}
-                  <p className="text-gray-300 leading-relaxed mb-6 flex-grow relative z-10">
-                    {project.description}
-                  </p>
+                  <div className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 flex-grow relative z-10">
+                    <ExpandableText maxHeight={120}>
+                      {project.description}
+                    </ExpandableText>
+                  </div>
 
                   {/* Bottom section - Technologies and Link - stays at bottom */}
                   <div className="mt-auto relative z-10">

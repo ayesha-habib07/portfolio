@@ -86,7 +86,7 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-20 px-6 relative overflow-hidden" ref={ref}>
+    <section id="experience" className="py-16 sm:py-20 px-4 sm:px-6 relative overflow-hidden" ref={ref}>
       {/* Background decoration */}
       <div className="absolute top-1/4 -left-40 w-96 h-96 bg-[rgb(var(--accent))]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-emerald-400/5 rounded-full blur-3xl"></div>
@@ -121,7 +121,7 @@ const Experience = () => {
                 whileHover={{ y: -8 }}
                 className="group"
               >
-                <div className="card-gradient rounded-2xl p-6 border border-[rgb(var(--border))] h-full relative overflow-hidden transition-all duration-300 hover:border-[rgb(var(--accent))]/50">
+                <div className="card-gradient rounded-2xl p-5 sm:p-6 border border-[rgb(var(--border))] h-full relative overflow-hidden transition-all duration-300 hover:border-[rgb(var(--accent))]/50">
                   {/* Background glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[rgb(var(--accent))]/0 to-[rgb(var(--accent))]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
@@ -152,10 +152,10 @@ const Experience = () => {
 
                   {/* Job title */}
                   <div className="relative z-10 mb-4">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-[rgb(var(--accent))] transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-[rgb(var(--accent))] transition-colors">
                       {exp.role}
                     </h3>
-                    <p className="text-gray-300 font-medium text-sm mb-1">
+                    <p className="text-gray-300 font-medium text-xs sm:text-sm mb-1 break-words">
                       {exp.company}
                     </p>
                   </div>
@@ -180,22 +180,22 @@ const Experience = () => {
           </div>
 
           {/* Stats Section */}
-          <motion.div variants={cardVariants} className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">
-              <div className="text-3xl font-bold text-gradient mb-1">{experiences.length}</div>
-              <div className="text-sm text-gray-400">Positions</div>
+          <motion.div variants={cardVariants} className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">
+            <div className="card-gradient rounded-xl p-4 sm:p-6 border border-[rgb(var(--border))] text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-gradient mb-1">{experiences.length}</div>
+              <div className="text-xs sm:text-sm text-gray-400">Positions</div>
             </div>
-            <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">
-              <div className="text-3xl font-bold text-gradient mb-1">3+</div>
-              <div className="text-sm text-gray-400">Years</div>
+            <div className="card-gradient rounded-xl p-4 sm:p-6 border border-[rgb(var(--border))] text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-gradient mb-1">3+</div>
+              <div className="text-xs sm:text-sm text-gray-400">Years</div>
             </div>
-            <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">
-              <div className="text-3xl font-bold text-gradient mb-1">{new Set(experiences.map(e => e.company)).size}</div>
-              <div className="text-sm text-gray-400">Companies</div>
+            <div className="card-gradient rounded-xl p-4 sm:p-6 border border-[rgb(var(--border))] text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-gradient mb-1">{new Set(experiences.map(e => e.company)).size}</div>
+              <div className="text-xs sm:text-sm text-gray-400">Companies</div>
             </div>
-            <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">
-              <div className="text-3xl font-bold text-gradient mb-1">100%</div>
-              <div className="text-sm text-gray-400">Dedicated</div>
+            <div className="card-gradient rounded-xl p-4 sm:p-6 border border-[rgb(var(--border))] text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-gradient mb-1">100%</div>
+              <div className="text-xs sm:text-sm text-gray-400">Dedicated</div>
             </div>
           </motion.div>
         </motion.div>
