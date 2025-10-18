@@ -2,8 +2,9 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { FiGithub, FiLinkedin, FiMail, FiInstagram } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiInstagram, FiDownload } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
+import { SiFiverr } from 'react-icons/si';
 
 const Hero = () => {
   const containerVariants = {
@@ -101,6 +102,15 @@ const Hero = () => {
               <FiLinkedin className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
+              href="https://www.fiverr.com/ali_asif_96"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
+              title="Fiverr"
+            >
+              <SiFiverr className="w-6 h-6 group-hover:scale-110 transition-transform" />
+            </a>
+            <a
               href="https://www.instagram.com/sho0_asif/"
               target="_blank"
               rel="noopener noreferrer"
@@ -128,7 +138,7 @@ const Hero = () => {
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex gap-4 pt-4">
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4">
             <a
               href="#contact"
               className="px-8 py-3 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg font-semibold hover:bg-[rgb(var(--accent-hover))] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[rgba(1,193,106,0.3)]"
@@ -136,8 +146,16 @@ const Hero = () => {
               Get in Touch
             </a>
             <a
+              href="/cv.pdf"
+              download="Asif_Ali_CV.pdf"
+              className="px-8 py-3 border-2 border-[rgb(var(--accent))] text-[rgb(var(--accent))] rounded-lg font-semibold hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--background))] transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
+            >
+              <FiDownload className="w-5 h-5" />
+              Download CV
+            </a>
+            <a
               href="#projects"
-              className="px-8 py-3 border-2 border-[rgb(var(--accent))] text-[rgb(var(--accent))] rounded-lg font-semibold hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--background))] transition-all duration-300 hover:-translate-y-1"
+              className="px-8 py-3 border-2 border-gray-500 text-gray-300 rounded-lg font-semibold hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1"
             >
               View Work
             </a>
@@ -156,7 +174,7 @@ const Hero = () => {
             {/* Image container */}
             <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-[rgb(var(--accent))] shadow-2xl shadow-[rgba(1,193,106,0.2)]">
               <Image
-                src="/images/profile.jpg"
+                src="/images/profile.webp"
                 alt="Asif Ali - Full Stack Developer"
                 fill
                 className="object-cover"
