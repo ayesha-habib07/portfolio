@@ -18,7 +18,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-gray-400 text-center md:text-left"
+            className="text-gray-400 text-sm sm:text-base text-center md:text-left"
           >
             © {currentYear} Asif Ali. All rights reserved.
           </motion.p>
@@ -28,9 +28,9 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex items-center gap-2 text-gray-400"
+            className="flex items-center gap-2 text-gray-400 text-sm sm:text-base text-center"
           >
-            <span>Made with</span>
+            <span className="hidden sm:inline">Made with</span>
             <motion.div
               animate={{
                 scale: [1, 1.2, 1],
@@ -43,7 +43,8 @@ const Footer = () => {
             >
               <FiHeart className="text-[rgb(var(--accent))]" fill="currentColor" />
             </motion.div>
-            <span>using Next.js & Framer Motion</span>
+            <span className="hidden sm:inline">using</span>
+            <span>Next.js & Framer Motion</span>
           </motion.div>
 
           {/* Quick Links */}
@@ -51,7 +52,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex gap-6 text-gray-400"
+            className="flex gap-4 sm:gap-6 text-gray-400 text-sm sm:text-base"
           >
             <a
               href="#about"

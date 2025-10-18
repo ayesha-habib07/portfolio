@@ -89,8 +89,7 @@ const Projects = () => {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[rgb(var(--accent))] to-emerald-400 mx-auto rounded-full"></div>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Here are some of the projects I've worked on, showcasing my expertise
-              in full-stack development
+              Recent projects I've built, from concept to deployment
             </p>
           </motion.div>
 

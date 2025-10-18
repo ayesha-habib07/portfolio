@@ -55,24 +55,38 @@ const About = () => {
                   Professional Journey
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  I'm a seasoned backend developer with 3+ years of experience
-                  architecting scalable server-side solutions. My core expertise
-                  lies in Node.js ecosystems, having built robust applications
-                  using Express.js, NestJS, and Fastify.
+                  Over the past 4+ years, I've been deep in backend development, 
+                  building APIs, architecting databases, and making sure systems 
+                  don't break when traffic spikes. My go-to stack includes 
+                  <span className="text-[rgb(var(--accent))] font-medium"> Node.js</span> with 
+                  <span className="text-[rgb(var(--accent))] font-medium"> Express</span>, 
+                  <span className="text-[rgb(var(--accent))] font-medium"> NestJS</span>, and 
+                  <span className="text-[rgb(var(--accent))] font-medium"> Fastify</span>.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  I excel at designing efficient database architectures using
-                  Supabase, MongoDB and PostgreSQL, complemented by modern ORMs
-                  like Prisma, TypeORM, and Sequelize. My DevOps experience
-                  includes deployments, CI/CD pipeline optimization and cloud
-                  configuration.
+                  I work a lot with <span className="text-[rgb(var(--accent))] font-medium">PostgreSQL</span>, 
+                  <span className="text-[rgb(var(--accent))] font-medium"> MongoDB</span>, and 
+                  <span className="text-[rgb(var(--accent))] font-medium"> Supabase</span> for data layers. 
+                  When it comes to ORMs, I've shipped features using 
+                  <span className="text-[rgb(var(--accent))] font-medium"> Prisma</span>, 
+                  <span className="text-[rgb(var(--accent))] font-medium"> TypeORM</span>, and 
+                  <span className="text-[rgb(var(--accent))] font-medium"> Sequelize</span>. 
+                  I also handle the DevOps side, including deployments, CI/CD pipelines, and server configurations.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Recently, I've been working heavily with <span className="text-[rgb(var(--accent))] font-medium">AI automation</span>. 
+                  I build workflows using <span className="text-[rgb(var(--accent))] font-medium">n8n</span>, 
+                  <span className="text-[rgb(var(--accent))] font-medium"> Zapier</span>, and 
+                  <span className="text-[rgb(var(--accent))] font-medium"> GoHighLevel</span>, 
+                  and integrate <span className="text-[rgb(var(--accent))] font-medium">LangChain</span> and 
+                  <span className="text-[rgb(var(--accent))] font-medium"> OpenAI APIs</span> directly into applications. 
+                  It's powerful stuff when you need intelligent automation at scale.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  While I specialize in backend development, I bring valuable
-                  full-stack perspective with hands-on experience in React.js and
-                  Svelte. I'm passionate about clean code architecture and system
-                  optimization, consistently delivering high-performance solutions
-                  that drive business success.
+                  While backend is my main focus, I can jump into frontend work when needed. 
+                  I've built interfaces with <span className="text-[rgb(var(--accent))] font-medium">React</span> and 
+                  <span className="text-[rgb(var(--accent))] font-medium"> Svelte</span>, 
+                  which helps me understand the full picture when designing APIs and system architecture.
                 </p>
               </div>
             </motion.div>

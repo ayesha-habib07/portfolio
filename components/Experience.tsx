@@ -108,7 +108,7 @@ const Experience = () => {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[rgb(var(--accent))] to-emerald-400 mx-auto rounded-full"></div>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              {experiences.length} positions across {new Set(experiences.map(e => e.company)).size} companies, building scalable solutions
+              {experiences.length} positions across {new Set(experiences.map(e => e.company)).size} companies, building systems that work
             </p>
           </motion.div>
 
@@ -186,7 +186,7 @@ const Experience = () => {
               <div className="text-sm text-gray-400">Positions</div>
             </div>
             <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">
-              <div className="text-3xl font-bold text-gradient mb-1">3+</div>
+              <div className="text-3xl font-bold text-gradient mb-1">4+</div>
               <div className="text-sm text-gray-400">Years</div>
             </div>
             <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">

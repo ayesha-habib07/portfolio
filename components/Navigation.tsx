@@ -61,13 +61,13 @@ const Navigation = () => {
         isScrolled ? 'backdrop-blur-lg shadow-lg shadow-black/20' : ''
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.a
             href="#"
             onClick={(e) => handleNavClick(e, '#')}
-            className="text-2xl font-bold"
+            className="text-xl sm:text-2xl font-bold"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

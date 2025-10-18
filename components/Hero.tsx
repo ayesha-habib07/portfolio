@@ -41,7 +41,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-20 sm:py-24 relative overflow-hidden">
       {/* Animated background gradient orbs */}
       <div className="absolute top-20 -left-20 w-72 h-72 bg-[rgb(var(--accent))] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
       <div className="absolute bottom-20 -right-20 w-96 h-96 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse delay-1000"></div>
@@ -58,31 +58,32 @@ const Hero = () => {
             <p className="text-[rgb(var(--accent))] text-lg font-medium">
               Hi there, I'm
             </p>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
               Asif Ali
             </h1>
-            <p className="text-xl md:text-2xl text-[rgb(var(--accent))] font-semibold">
+            <p className="text-lg sm:text-xl md:text-2xl text-[rgb(var(--accent))] font-semibold">
               (Asif Rumi)
             </p>
-            <h2 className="text-2xl md:text-3xl text-gray-400">
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-400">
               Full Stack Developer
             </h2>
           </motion.div>
 
           <motion.p
             variants={itemVariants}
-            className="text-gray-300 text-lg leading-relaxed max-w-xl"
+            className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl"
           >
-            Seasoned backend developer with{' '}
-            <span className="text-gradient font-semibold">3+ years</span> of
-            experience architecting scalable server-side solutions. Specializing
-            in <span className="text-gradient font-semibold">Node.js</span>{' '}
-            ecosystems with expertise in React.js, TypeScript, and modern web
-            technologies.
+            Backend specialist with{' '}
+            <span className="text-gradient font-semibold">4+ years</span>{' '}
+            building production-ready systems. I work primarily with{' '}
+            <span className="text-gradient font-semibold">Node.js</span>,{' '}
+            <span className="text-gradient font-semibold">TypeScript</span>, and{' '}
+            <span className="text-gradient font-semibold">React</span>, creating 
+            reliable solutions that scale and perform under real-world pressure.
           </motion.p>
 
           {/* Social Links */}
-          <motion.div variants={itemVariants} className="flex gap-4 pt-4">
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-3 sm:gap-4 pt-4">
             <a
               href="https://github.com/rumi-asif"
               target="_blank"
@@ -90,7 +91,7 @@ const Hero = () => {
               className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
               title="GitHub"
             >
-              <FiGithub className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <FiGithub className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
               href="https://www.linkedin.com/in/asif-rumi-0a4010157/"
@@ -99,63 +100,64 @@ const Hero = () => {
               className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
               title="LinkedIn"
             >
-              <FiLinkedin className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <FiLinkedin className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
               href="https://www.fiverr.com/ali_asif_96"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
+              className="p-2.5 sm:p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
               title="Fiverr"
             >
-              <SiFiverr className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <SiFiverr className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
               href="https://www.instagram.com/sho0_asif/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
+              className="p-2.5 sm:p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
               title="Instagram"
             >
-              <FiInstagram className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <FiInstagram className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
               href="mailto:rumiasif77@gmail.com"
-              className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
+              className="p-2.5 sm:p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
               title="Email"
             >
-              <FiMail className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <FiMail className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
               href="https://wa.me/923427059590"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
+              className="p-2.5 sm:p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
               title="WhatsApp"
             >
-              <FaWhatsapp className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <FaWhatsapp className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4">
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-3 sm:gap-4 pt-4">
             <a
               href="#contact"
-              className="px-8 py-3 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg font-semibold hover:bg-[rgb(var(--accent-hover))] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[rgba(1,193,106,0.3)]"
+              className="px-5 sm:px-8 py-2.5 sm:py-3 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg text-sm sm:text-base font-semibold hover:bg-[rgb(var(--accent-hover))] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[rgba(1,193,106,0.3)]"
             >
               Get in Touch
             </a>
             <a
               href="/cv.pdf"
               download="Asif_Ali_CV.pdf"
-              className="px-8 py-3 border-2 border-[rgb(var(--accent))] text-[rgb(var(--accent))] rounded-lg font-semibold hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--background))] transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
+              className="px-5 sm:px-8 py-2.5 sm:py-3 border-2 border-[rgb(var(--accent))] text-[rgb(var(--accent))] rounded-lg text-sm sm:text-base font-semibold hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--background))] transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
             >
-              <FiDownload className="w-5 h-5" />
-              Download CV
+              <FiDownload className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="hidden xs:inline">Download CV</span>
+              <span className="xs:hidden">CV</span>
             </a>
             <a
               href="#projects"
-              className="px-8 py-3 border-2 border-gray-500 text-gray-300 rounded-lg font-semibold hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1"
+              className="px-5 sm:px-8 py-2.5 sm:py-3 border-2 border-gray-500 text-gray-300 rounded-lg text-sm sm:text-base font-semibold hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1"
             >
               View Work
             </a>
@@ -172,7 +174,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-[rgb(var(--accent))] to-emerald-400 rounded-full blur-3xl opacity-20"></div>
             
             {/* Image container */}
-            <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-[rgb(var(--accent))] shadow-2xl shadow-[rgba(1,193,106,0.2)]">
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-[rgb(var(--accent))] shadow-2xl shadow-[rgba(1,193,106,0.2)]">
               <Image
                 src="/images/profile.webp"
                 alt="Asif Ali - Full Stack Developer"
@@ -187,12 +189,12 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.2, duration: 0.5 }}
-              className="absolute -bottom-4 -right-4 bg-[rgb(var(--card))] border-2 border-[rgb(var(--accent))] rounded-2xl px-6 py-3 shadow-lg"
+              className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 bg-[rgb(var(--card))] border-2 border-[rgb(var(--accent))] rounded-xl sm:rounded-2xl px-3 py-2 sm:px-6 sm:py-3 shadow-lg"
             >
-              <p className="text-sm font-semibold text-gray-300">
-                <span className="text-gradient text-2xl">3+</span> Years
+              <p className="text-xs sm:text-sm font-semibold text-gray-300">
+                <span className="text-gradient text-xl sm:text-2xl">4+</span> <span className="hidden xs:inline">Years</span><span className="xs:hidden">Yrs</span>
               </p>
-              <p className="text-xs text-gray-400">Experience</p>
+              <p className="text-[10px] sm:text-xs text-gray-400">Experience</p>
             </motion.div>
           </div>
         </motion.div>

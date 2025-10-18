@@ -12,12 +12,20 @@ import {
   SiFastify,
   SiReact,
   SiNextdotjs,
+  SiSvelte,
+  SiHtml5,
+  SiCss3,
   SiMongodb,
   SiPostgresql,
+  SiMysql,
   SiSupabase,
   SiSqlite,
+  SiOpenai,
+  SiPython,
+  SiZapier,
   SiDocker,
   SiGit,
+  SiGithubactions,
   SiNginx,
   SiLinux,
 } from 'react-icons/si';
@@ -30,55 +38,67 @@ interface SkillCategory {
 
 const skillsData: SkillCategory[] = [
   {
-    title: 'Frontend',
-    skills: [
-      { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
-      { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
-      { name: 'React.js', icon: SiReact, color: '#61DAFB' },
-      { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
-    ],
-  },
-  {
-    title: 'Backend',
+    title: 'Backend Development',
     skills: [
       { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
-      { name: 'Express', icon: SiExpress, color: '#ffffff' },
+      { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+      { name: 'Express.js', icon: SiExpress, color: '#ffffff' },
       { name: 'NestJS', icon: SiNestjs, color: '#E0234E' },
       { name: 'Fastify', icon: SiFastify, color: '#000000' },
     ],
   },
   {
-    title: 'Database',
+    title: 'Database & Data',
     skills: [
-      { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
+      { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+      { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
       { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' },
       { name: 'SQLite', icon: SiSqlite, color: '#003B57' },
     ],
   },
   {
-    title: 'DevOps Engineer',
+    title: 'Frontend Development',
+    skills: [
+      { name: 'React.js', icon: SiReact, color: '#61DAFB' },
+      { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
+      { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
+      { name: 'CSS3', icon: SiCss3, color: '#1572B6' },
+      { name: 'Svelte', icon: SiSvelte, color: '#FF3E00' },
+    ],
+  },
+  {
+    title: 'AI & Automation',
+    skills: [
+      { name: 'OpenAI', icon: SiOpenai, color: '#00A67E' },
+      { name: 'LangChain', icon: SiPython, color: '#3776AB' },
+      { name: 'n8n', icon: SiNodedotjs, color: '#EA4B71' },
+      { name: 'Zapier', icon: SiZapier, color: '#FF4F00' },
+      { name: 'GoHighLevel', icon: SiNodedotjs, color: '#9333EA' },
+    ],
+  },
+  {
+    title: 'DevOps & Infrastructure',
     skills: [
       { name: 'Docker', icon: SiDocker, color: '#2496ED' },
-      { name: 'Git', icon: SiGit, color: '#F05032' },
-      { name: 'Nginx', icon: SiNginx, color: '#009639' },
       { name: 'Linux', icon: SiLinux, color: '#FCC624' },
+      { name: 'Nginx', icon: SiNginx, color: '#009639' },
+      { name: 'Git', icon: SiGit, color: '#F05032' },
+      { name: 'GitHub Actions', icon: SiGithubactions, color: '#2088FF' },
     ],
   },
 ];
 
 const additionalSkills = [
-  'CI/CD (GitLab CI)',
-  'Server Deployment',
-  'Cloud Infrastructure',
-  'AI Integration',
-  'Agentic AI',
-  'REST APIs',
+  'REST API Design',
+  'Prisma ORM',
   'TypeORM',
   'Sequelize',
-  'YAML',
-  'SEO',
-  'Svelte',
+  'CI/CD Pipelines',
+  'GitLab CI',
+  'Server Deployment',
+  'Cloud Infrastructure',
+  'SEO Optimization',
 ];
 
 const Skills = () => {
@@ -117,23 +137,23 @@ const Skills = () => {
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4 mb-16">
             <h2 className="text-4xl md:text-5xl font-bold">
-              Skills & <span className="text-gradient">Technologies</span>
+              Tech <span className="text-gradient">Stack</span>
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[rgb(var(--accent))] to-emerald-400 mx-auto rounded-full"></div>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Technologies and tools I use to bring ideas to life
+              Tools and technologies I work with daily
             </p>
           </motion.div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
             {skillsData.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
                 variants={itemVariants}
                 className="card-gradient rounded-2xl p-6 border border-[rgb(var(--border))] hover-lift"
               >
-                <h3 className="text-xl font-bold mb-6 text-[rgb(var(--accent))]">
+                <h3 className="text-lg font-bold mb-6 text-[rgb(var(--accent))] min-h-[56px] flex items-center">
                   {category.title}
                 </h3>
                 <div className="space-y-4">
@@ -141,10 +161,10 @@ const Skills = () => {
                     <motion.div
                       key={skillIndex}
                       whileHover={{ x: 5 }}
-                      className="flex items-center gap-3 group cursor-pointer"
+                      className="flex items-center gap-3 group cursor-pointer min-h-[44px]"
                     >
                       <div
-                        className="p-2 bg-[rgb(var(--background))] rounded-lg group-hover:scale-110 transition-transform"
+                        className="p-2 bg-[rgb(var(--background))] rounded-lg group-hover:scale-110 transition-transform flex-shrink-0"
                         style={{
                           backgroundColor: `${skill.color}15`,
                         }}
@@ -154,7 +174,7 @@ const Skills = () => {
                           style={{ color: skill.color }}
                         />
                       </div>
-                      <span className="text-gray-300 font-medium group-hover:text-[rgb(var(--accent))] transition-colors">
+                      <span className="text-gray-300 font-medium group-hover:text-[rgb(var(--accent))] transition-colors text-sm leading-tight">
                         {skill.name}
                       </span>
                     </motion.div>
@@ -166,7 +186,7 @@ const Skills = () => {
 
           {/* Additional Skills */}
           <motion.div variants={itemVariants} className="text-center">
-            <h3 className="text-2xl font-bold mb-6">Other Technologies</h3>
+            <h3 className="text-2xl font-bold mb-6">Additional Tools & Skills</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {additionalSkills.map((skill, index) => (
                 <motion.span
@@ -182,7 +202,7 @@ const Skills = () => {
 
           {/* Task Management Tools */}
           <motion.div variants={itemVariants} className="mt-12 text-center">
-            <h3 className="text-2xl font-bold mb-6">Task Management & Collaboration</h3>
+            <h3 className="text-2xl font-bold mb-6">Collaboration Tools</h3>
             <div className="card-gradient rounded-2xl p-6 border border-[rgb(var(--border))] max-w-4xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4">
                 {[
