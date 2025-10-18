@@ -31,7 +31,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 px-6 relative" ref={ref}>
+    <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 relative" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -50,8 +50,8 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Left side - Main description */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="card-gradient rounded-2xl p-8 border border-[rgb(var(--border))] hover-lift">
-                <h3 className="text-2xl font-bold mb-4 text-gradient">
+              <div className="card-gradient rounded-2xl p-6 sm:p-8 border border-[rgb(var(--border))] hover-lift">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gradient">
                   Professional Journey
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-4">

@@ -93,7 +93,7 @@ const Navigation = () => {
               href="mailto:rumiasif77@gmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg font-semibold hover:bg-[rgb(var(--accent-hover))] transition-all"
+              className="px-4 sm:px-6 py-2 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg text-sm sm:text-base font-semibold hover:bg-[rgb(var(--accent-hover))] transition-all"
             >
               Hire Me
             </motion.a>
@@ -135,7 +135,7 @@ const Navigation = () => {
             ))}
             <motion.a
               href="mailto:rumiasif77@gmail.com"
-              className="block px-6 py-2 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg font-semibold text-center hover:bg-[rgb(var(--accent-hover))] transition-all"
+              className="block px-6 py-3 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg font-semibold text-center hover:bg-[rgb(var(--accent-hover))] transition-all"
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: navItems.length * 0.1 }}
