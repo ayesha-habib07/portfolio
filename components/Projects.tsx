@@ -24,7 +24,7 @@ const projects: Project[] = [
       'Built a full-stack roadside assistance web application featuring real-time provider matching, GPS-based service requests, a bidding system, and multi-channel notifications. Utilized React, TypeScript, Supabase, and the Google Maps API for dynamic and responsive user experience.',
     technologies: ['React', 'TypeScript', 'Supabase', 'Google Maps API', 'Real-time'],
     link: 'https://1800autotow.com',
-    image: '/images/projects/1800autotow.jpg',
+    image: '/images/projects/autotow.webp',
     status: 'ongoing',
   },
   {
@@ -34,7 +34,7 @@ const projects: Project[] = [
       'Developed and maintained a full-stack CRM platform for a roofing company, integrating Supabase, Deno Edge Functions, and a modern React frontend for seamless lead and client management.',
     technologies: ['React', 'Supabase', 'Deno', 'Edge Functions', 'CRM'],
     link: 'https://mbaroofing.com',
-    image: '/images/projects/mbaroofing.jpg',
+    image: '/images/projects/mbaroofing.webp',
     status: 'completed',
   },
   {
@@ -44,7 +44,7 @@ const projects: Project[] = [
       'Worked as a Backend Developer on Theo AI, a project focused on environmental changes and their impact on Sweden. Responsibilities included attending daily standups, delivering tasks on time, creating REST APIs, and fixing bugs.',
     technologies: ['Node.js', 'Express', 'REST API', 'MongoDB', 'Backend'],
     link: 'https://app.theo.ai',
-    image: '/images/projects/theo-ai.jpg',
+    image: '/images/projects/theo-ai.webp',
     status: 'completed',
   },
 ];

@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiMail, FiMapPin, FiPhone, FiLinkedin, FiGithub, FiInstagram } from 'react-icons/fi';
+import { FiMail, FiMapPin, FiPhone, FiLinkedin, FiGithub, FiInstagram, FiDownload } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
+import { SiFiverr } from 'react-icons/si';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -64,6 +65,12 @@ const Contact = () => {
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/asif-rumi-0a4010157/',
       color: '#0077B5',
+    },
+    {
+      icon: SiFiverr,
+      label: 'Fiverr',
+      href: 'https://www.fiverr.com/ali_asif_96',
+      color: '#1DBF73',
     },
     {
       icon: FiInstagram,
@@ -201,12 +208,20 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="relative z-10 mt-8">
+                <div className="relative z-10 mt-8 space-y-3">
                   <a
                     href="mailto:rumiasif77@gmail.com"
                     className="block w-full py-4 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg font-semibold text-center hover:bg-[rgb(var(--accent-hover))] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[rgba(1,193,106,0.3)]"
                   >
                     Send Me an Email
+                  </a>
+                  <a
+                    href="/cv.pdf"
+                    download="Asif_Ali_CV.pdf"
+                    className="flex items-center justify-center gap-2 w-full py-4 border-2 border-[rgb(var(--accent))] text-[rgb(var(--accent))] rounded-lg font-semibold hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--background))] transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <FiDownload className="w-5 h-5" />
+                    Download My CV
                   </a>
                 </div>
               </div>
