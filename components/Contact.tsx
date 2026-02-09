@@ -209,14 +209,14 @@ const Contact = () => {
 
                 <div className="relative z-10 mt-6 sm:mt-8 space-y-3">
                   <a
-                    href="mailto:rumiasif77@gmail.com"
+                    href="mailto:rumiarif77@gmail.com"
                     className="block w-full py-3 sm:py-4 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg text-sm sm:text-base font-semibold text-center hover:bg-[rgb(var(--accent-hover))] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[rgba(1,193,106,0.3)]"
                   >
                     Send Me an Email
                   </a>
                   <a
                     href="/cv.pdf"
-                    download="Asif_Ali_CV.pdf"
+                    download="Arif_Ali_CV.pdf"
                     className="flex items-center justify-center gap-2 w-full py-3 sm:py-4 border-2 border-[rgb(var(--accent))] text-[rgb(var(--accent))] rounded-lg text-sm sm:text-base font-semibold hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--background))] transition-all duration-300 hover:-translate-y-1"
                   >
                     <FiDownload className="w-4 h-4 sm:w-5 sm:h-5" />

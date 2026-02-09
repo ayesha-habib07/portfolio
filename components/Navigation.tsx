@@ -71,7 +71,7 @@ const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-white">Asif Ali</span>
+            <span className="text-white">Arif Ali</span>
             <span className="text-gradient">.</span>
           </motion.a>
 
@@ -90,7 +90,7 @@ const Navigation = () => {
               </motion.a>
             ))}
             <motion.a
-              href="mailto:rumiasif77@gmail.com"
+              href="mailto:rumiarif77@gmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-4 sm:px-6 py-2 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg text-sm sm:text-base font-semibold hover:bg-[rgb(var(--accent-hover))] transition-all"
@@ -134,7 +134,7 @@ const Navigation = () => {
               </motion.a>
             ))}
             <motion.a
-              href="mailto:rumiasif77@gmail.com"
+              href="mailto:rumiarif77@gmail.com"
               className="block px-6 py-3 bg-[rgb(var(--accent))] text-[rgb(var(--background))] rounded-lg font-semibold text-center hover:bg-[rgb(var(--accent-hover))] transition-all"
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}

@@ -20,7 +20,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-gray-400 text-sm sm:text-base text-center md:text-left"
           >
-            © {currentYear} Asif Ali. All rights reserved.
+            © {currentYear} Arif Ali. All rights reserved.
           </motion.p>
 
           {/* Made with love */}

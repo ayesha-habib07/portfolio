@@ -59,10 +59,10 @@ const Hero = () => {
               Hi there, I'm
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
-              Asif Ali
+              Arif Ali Koyani
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-[rgb(var(--accent))] font-semibold">
-              (Asif Rumi)
+              (Arif Ali Koyani)
             </p>
             <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-400">
               Full Stack Developer
@@ -85,7 +85,7 @@ const Hero = () => {
           {/* Social Links */}
           <motion.div variants={itemVariants} className="flex flex-wrap gap-3 sm:gap-4 pt-4">
             <a
-              href="https://github.com/rumi-asif"
+              href="https://github.com/rumi-arif"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
@@ -94,7 +94,7 @@ const Hero = () => {
               <FiGithub className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://www.linkedin.com/in/asif-rumi-0a4010157/"
+              href="https://www.linkedin.com/in/arif-rumi-0a4010157/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
@@ -103,7 +103,7 @@ const Hero = () => {
               <FiLinkedin className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://www.fiverr.com/ali_asif_96"
+              href="https://www.fiverr.com/ali_arif_96"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 sm:p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
@@ -112,7 +112,7 @@ const Hero = () => {
               <SiFiverr className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://www.instagram.com/sho0_asif/"
+              href="https://www.instagram.com/sho0_arif/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 sm:p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
@@ -121,7 +121,7 @@ const Hero = () => {
               <FiInstagram className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="mailto:rumiasif77@gmail.com"
+              href="mailto:rumiarif77@gmail.com"
               className="p-2.5 sm:p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
               title="Email"
             >
@@ -148,7 +148,7 @@ const Hero = () => {
             </a>
             <a
               href="/cv.pdf"
-              download="Asif_Ali_CV.pdf"
+              download="Arif_Ali_CV.pdf"
               className="px-5 sm:px-8 py-2.5 sm:py-3 border-2 border-[rgb(var(--accent))] text-[rgb(var(--accent))] rounded-lg text-sm sm:text-base font-semibold hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--background))] transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
             >
               <FiDownload className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -176,8 +176,8 @@ const Hero = () => {
             {/* Image container */}
             <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-[rgb(var(--accent))] shadow-2xl shadow-[rgba(1,193,106,0.2)]">
               <Image
-                src="/images/profile.webp"
-                alt="Asif Ali - Full Stack Developer"
+                src="/profile.webp"
+                alt="Arif Ali - Full Stack Developer"
                 fill
                 className="object-cover"
                 priority

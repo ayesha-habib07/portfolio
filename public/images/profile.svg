@@ -28,6 +28,6 @@
   <text x="400" y="280" font-family="Inter, sans-serif" font-size="140" font-weight="bold" fill="#ffffff" text-anchor="middle">AA</text>
   
   <!-- Text -->
-  <text x="400" y="560" font-family="Inter, sans-serif" font-size="32" font-weight="600" fill="#01c16a" text-anchor="middle">Asif Ali</text>
+  <text x="400" y="560" font-family="Inter, sans-serif" font-size="32" font-weight="600" fill="#01c16a" text-anchor="middle">Arif Ali</text>
   <text x="400" y="600" font-family="Inter, sans-serif" font-size="24" fill="#9ca3af" text-anchor="middle">Full Stack Developer</text>
 </svg>

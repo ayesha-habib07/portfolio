@@ -141,7 +141,7 @@ const About = () => {
                       </div>
                       <div>
                         <div className="flex justify-between mb-1">
-                          <span className="text-gray-300">Wakhi</span>
+                          <span className="text-gray-300">Hunza</span>
                           <span className="text-[rgb(var(--accent))]">Native</span>
                         </div>
                         <div className="h-2 bg-[rgb(var(--background))] rounded-full overflow-hidden">
