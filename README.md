@@ -141,10 +141,10 @@ This project is open source and available for personal use.
 
 ## 👤 Author
 
-**Asif Ali**
-- Email: rumiasif77@gmail.com
-- LinkedIn: [asif-rumi-0a4010157](https://www.linkedin.com/in/asif-rumi-0a4010157/)
-- Location: Hunza Gojal, Pakistan
+**arif ali koyani**
+- Email: arifkoyani@gmail.com
+- LinkedIn: [arifkoyani-0a4010157](https://www.linkedin.com/in/arifkoyani/)
+- Location: Hunza Ganish, Pakistan
 
 ---
 

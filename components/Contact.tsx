@@ -36,19 +36,19 @@ const Contact = () => {
     {
       icon: FiMail,
       label: 'Email',
-      value: 'rumiasif77@gmail.com',
-      href: 'mailto:rumiasif77@gmail.com',
+      value: 'arifkoyani@gmail.com',
+      href: 'mailto:arifkoyani@gmail.com',
     },
     {
       icon: FiPhone,
       label: 'Phone',
-      value: '+92 342 7059590',
-      href: 'tel:+923427059590',
+      value: '+92 3188278882',
+      href: 'tel:+923010104990',
     },
     {
       icon: FiMapPin,
       label: 'Location',
-      value: 'Hunza Gojal, Pakistan',
+      value: 'Hunza Ganish, Pakistan',
       href: null,
     },
   ];
@@ -57,37 +57,37 @@ const Contact = () => {
     {
       icon: FiGithub,
       label: 'GitHub',
-      href: 'https://github.com/rumi-asif',
+      href: 'https://github.com/arifkoyani',
       color: '#ffffff',
     },
     {
       icon: FiLinkedin,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/asif-rumi-0a4010157/',
+      href: 'https://www.linkedin.com/in/arif-ali-koyani-2b1413261/',
       color: '#0077B5',
     },
     {
       icon: SiFiverr,
       label: 'Fiverr',
-      href: 'https://www.fiverr.com/ali_asif_96',
+      href: 'https://www.fiverr.com/arifkoyani',
       color: '#1DBF73',
     },
     {
       icon: FiInstagram,
       label: 'Instagram',
-      href: 'https://www.instagram.com/sho0_asif/',
+      href: 'https://www.instagram.com/arifkoyani/',
       color: '#E4405F',
     },
     {
       icon: FaWhatsapp,
       label: 'WhatsApp',
-      href: 'https://wa.me/923427059590',
+      href: 'https://wa.me/923188278882',
       color: '#25D366',
     },
     {
       icon: FiMail,
       label: 'Email',
-      href: 'mailto:rumiasif77@gmail.com',
+      href: 'mailto:arifkoyani@gmail.com',
       color: '#01c16a',
     },
   ];
