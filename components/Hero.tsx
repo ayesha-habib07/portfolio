@@ -59,13 +59,13 @@ const Hero = () => {
               Hi there, I'm
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
-              Arif Ali Koyani
+              Ayesha Habib
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-[rgb(var(--accent))] font-semibold">
+            {/* <p className="text-lg sm:text-xl md:text-2xl text-[rgb(var(--accent))] font-semibold">
               (Arif Ali Koyani)
-            </p>
+            </p> */}
             <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-400">
-              Full Stack Developer
+              Frontend Developer & Agentic Chatbot Developer
             </h2>
           </motion.div>
 
@@ -73,19 +73,26 @@ const Hero = () => {
             variants={itemVariants}
             className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl"
           >
-            Backend specialist with{' '}
-            <span className="text-gradient font-semibold">4+ years</span>{' '}
-            building production-ready systems. I work primarily with{' '}
-            <span className="text-gradient font-semibold">Node.js</span>,{' '}
-            <span className="text-gradient font-semibold">TypeScript</span>, and{' '}
-            <span className="text-gradient font-semibold">React</span>, creating 
-            reliable solutions that scale and perform under real-world pressure.
+            Frontend Developer with <span className="text-gradient font-semibold">2+ years of experience </span>
+            building responsive and scalable web applications using
+            <span className="text-gradient font-semibold"> Next.js</span>,
+            <span className="text-gradient font-semibold"> React</span>, and
+            <span className="text-gradient font-semibold"> TypeScript</span>.
+
+            I develop agentic chatbot systems using
+            <span className="text-gradient font-semibold"> LangChain</span> and
+            <span className="text-gradient font-semibold"> LangGraph</span>,
+            implementing RAG workflows and vector-based search.
+
+            Currently expanding my backend expertise with
+            <span className="text-gradient font-semibold"> Python</span> to build scalable APIs and backend systems.
           </motion.p>
+
 
           {/* Social Links */}
           <motion.div variants={itemVariants} className="flex flex-wrap gap-3 sm:gap-4 pt-4">
             <a
-              href="https://github.com/rumi-arif"
+              href="https://github.com/ayesha-habib07"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
@@ -94,7 +101,7 @@ const Hero = () => {
               <FiGithub className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://www.linkedin.com/in/arif-rumi-0a4010157/"
+              href="https://www.linkedin.com/in/ayesha-habib-5ba15225a/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
@@ -102,7 +109,7 @@ const Hero = () => {
             >
               <FiLinkedin className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
-            <a
+            {/* <a
               href="https://www.fiverr.com/ali_arif_96"
               target="_blank"
               rel="noopener noreferrer"
@@ -119,16 +126,16 @@ const Hero = () => {
               title="Instagram"
             >
               <FiInstagram className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
-            </a>
+            </a> */}
             <a
-              href="mailto:rumiarif77@gmail.com"
+              href="mailto:ayeshahabib465@gmail.com"
               className="p-2.5 sm:p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
               title="Email"
             >
               <FiMail className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://wa.me/923427059590"
+              href="https://wa.me/03555803561"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 sm:p-3 bg-[rgb(var(--card))] rounded-lg hover:bg-[rgb(var(--accent))] transition-all duration-300 hover:-translate-y-1 group"
@@ -147,8 +154,8 @@ const Hero = () => {
               Get in Touch
             </a>
             <a
-              href="/cv.pdf"
-              download="Arif_Ali_CV.pdf"
+              href="./CVV.pdf"
+              download="Ayesha_Habib_CV.pdf"
               className="px-5 sm:px-8 py-2.5 sm:py-3 border-2 border-[rgb(var(--accent))] text-[rgb(var(--accent))] rounded-lg text-sm sm:text-base font-semibold hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--background))] transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
             >
               <FiDownload className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -172,12 +179,12 @@ const Hero = () => {
           <div className="relative">
             {/* Glow effect behind image */}
             <div className="absolute inset-0 bg-gradient-to-r from-[rgb(var(--accent))] to-emerald-400 rounded-full blur-3xl opacity-20"></div>
-            
+
             {/* Image container */}
             <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-[rgb(var(--accent))] shadow-2xl shadow-[rgba(1,193,106,0.2)]">
               <Image
-                src="/profile.webp"
-                alt="Arif Ali - Full Stack Developer"
+                src="./images/PP.jpeg"
+                alt="Ayesha Habib - Full Stack Developer"
                 fill
                 className="object-cover"
                 priority
@@ -192,7 +199,7 @@ const Hero = () => {
               className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 bg-[rgb(var(--card))] border-2 border-[rgb(var(--accent))] rounded-xl sm:rounded-2xl px-3 py-2 sm:px-6 sm:py-3 shadow-lg"
             >
               <p className="text-xs sm:text-sm font-semibold text-gray-300">
-                <span className="text-gradient text-xl sm:text-2xl">4+</span> <span className="hidden xs:inline">Years</span><span className="xs:hidden">Yrs</span>
+                <span className="text-gradient text-xl sm:text-2xl">2+</span> <span className="hidden xs:inline">Years</span><span className="xs:hidden">Yrs</span>
               </p>
               <p className="text-[10px] sm:text-xs text-gray-400">Experience</p>
             </motion.div>

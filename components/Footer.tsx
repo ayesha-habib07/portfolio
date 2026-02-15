@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="py-8 px-6 border-t border-[rgb(var(--border))] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[rgb(var(--accent))]/5 rounded-full blur-3xl"></div>
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
@@ -20,7 +20,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-gray-400 text-sm sm:text-base text-center md:text-left"
           >
-            © {currentYear} Arif Ali. All rights reserved.
+            © {currentYear} Ayesha. All rights reserved.
           </motion.p>
 
           {/* Made with love */}

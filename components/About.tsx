@@ -49,44 +49,88 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Left side - Main description */}
-            <motion.div variants={itemVariants} className="space-y-6">
+            {/* <motion.div variants={itemVariants} className="space-y-6">
               <div className="card-gradient rounded-2xl p-6 sm:p-8 border border-[rgb(var(--border))] hover-lift">
                 <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gradient">
                   Professional Journey
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Over the past 4+ years, I've been deep in backend development, 
-                  building APIs, architecting databases, and making sure systems 
-                  don't break when traffic spikes. My go-to stack includes 
-                  <span className="text-[rgb(var(--accent))] font-medium"> Node.js</span> with 
-                  <span className="text-[rgb(var(--accent))] font-medium"> Express</span>, 
-                  <span className="text-[rgb(var(--accent))] font-medium"> NestJS</span>, and 
+                  Over the past 4+ years, I've been deep in backend development,
+                  building APIs, architecting databases, and making sure systems
+                  don't break when traffic spikes. My go-to stack includes
+                  <span className="text-[rgb(var(--accent))] font-medium"> Node.js</span> with
+                  <span className="text-[rgb(var(--accent))] font-medium"> Express</span>,
+                  <span className="text-[rgb(var(--accent))] font-medium"> NestJS</span>, and
                   <span className="text-[rgb(var(--accent))] font-medium"> Fastify</span>.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  I work a lot with <span className="text-[rgb(var(--accent))] font-medium">PostgreSQL</span>, 
-                  <span className="text-[rgb(var(--accent))] font-medium"> MongoDB</span>, and 
-                  <span className="text-[rgb(var(--accent))] font-medium"> Supabase</span> for data layers. 
-                  When it comes to ORMs, I've shipped features using 
-                  <span className="text-[rgb(var(--accent))] font-medium"> Prisma</span>, 
-                  <span className="text-[rgb(var(--accent))] font-medium"> TypeORM</span>, and 
-                  <span className="text-[rgb(var(--accent))] font-medium"> Sequelize</span>. 
+                  I work a lot with <span className="text-[rgb(var(--accent))] font-medium">PostgreSQL</span>,
+                  <span className="text-[rgb(var(--accent))] font-medium"> MongoDB</span>, and
+                  <span className="text-[rgb(var(--accent))] font-medium"> Supabase</span> for data layers.
+                  When it comes to ORMs, I've shipped features using
+                  <span className="text-[rgb(var(--accent))] font-medium"> Prisma</span>,
+                  <span className="text-[rgb(var(--accent))] font-medium"> TypeORM</span>, and
+                  <span className="text-[rgb(var(--accent))] font-medium"> Sequelize</span>.
                   I also handle the DevOps side, including deployments, CI/CD pipelines, and server configurations.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Recently, I've been working heavily with <span className="text-[rgb(var(--accent))] font-medium">AI automation</span>. 
-                  I build workflows using <span className="text-[rgb(var(--accent))] font-medium">n8n</span>, 
-                  <span className="text-[rgb(var(--accent))] font-medium"> Zapier</span>, and 
-                  <span className="text-[rgb(var(--accent))] font-medium"> GoHighLevel</span>, 
-                  and integrate <span className="text-[rgb(var(--accent))] font-medium">LangChain</span> and 
-                  <span className="text-[rgb(var(--accent))] font-medium"> OpenAI APIs</span> directly into applications. 
+                  Recently, I've been working heavily with <span className="text-[rgb(var(--accent))] font-medium">AI automation</span>.
+                  I build workflows using <span className="text-[rgb(var(--accent))] font-medium">n8n</span>,
+                  <span className="text-[rgb(var(--accent))] font-medium"> Zapier</span>, and
+                  <span className="text-[rgb(var(--accent))] font-medium"> GoHighLevel</span>,
+                  and integrate <span className="text-[rgb(var(--accent))] font-medium">LangChain</span> and
+                  <span className="text-[rgb(var(--accent))] font-medium"> OpenAI APIs</span> directly into applications.
                   It's powerful stuff when you need intelligent automation at scale.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  While backend is my main focus, I can jump into frontend work when needed. 
-                  I've built interfaces with <span className="text-[rgb(var(--accent))] font-medium">React</span> and 
-                  <span className="text-[rgb(var(--accent))] font-medium"> Svelte</span>, 
+                  While backend is my main focus, I can jump into frontend work when needed.
+                  I've built interfaces with <span className="text-[rgb(var(--accent))] font-medium">React</span> and
+                  <span className="text-[rgb(var(--accent))] font-medium"> Svelte</span>,
                   which helps me understand the full picture when designing APIs and system architecture.
+                </p>
+              </div>
+            </motion.div> */}
+            <motion.div variants={itemVariants} className="space-y-6">
+              <div className="card-gradient rounded-2xl p-6 sm:p-8 border border-[rgb(var(--border))] hover-lift">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gradient">
+                  Professional Journey
+                </h3>
+
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Over the past <span className="text-[rgb(var(--accent))] font-medium">2+ years</span>,
+                  I have been focused on frontend development, building responsive and
+                  user-friendly web applications using
+                  <span className="text-[rgb(var(--accent))] font-medium"> Next.js</span>,
+                  <span className="text-[rgb(var(--accent))] font-medium"> React</span>, and
+                  <span className="text-[rgb(var(--accent))] font-medium"> TypeScript</span>.
+                  I enjoy creating clean interfaces and scalable component architectures.
+                </p>
+
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Alongside frontend development, I work as an
+                  <span className="text-[rgb(var(--accent))] font-medium"> Agentic Chatbot Developer</span>,
+                  building intelligent systems using
+                  <span className="text-[rgb(var(--accent))] font-medium"> LangChain</span> and
+                  <span className="text-[rgb(var(--accent))] font-medium"> LangGraph</span>.
+                  I implement RAG-based workflows, vector search, and embeddings to create
+                  context-aware chatbot solutions integrated with real databases.
+                </p>
+
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  I have experience working with
+                  <span className="text-[rgb(var(--accent))] font-medium"> MongoDB</span>,
+                  <span className="text-[rgb(var(--accent))] font-medium"> PostgreSQL</span>,
+                  <span className="text-[rgb(var(--accent))] font-medium"> SQL</span>, and
+                  <span className="text-[rgb(var(--accent))] font-medium"> Firebase</span>
+                  for data management, implementing CRUD operations, and connecting
+                  intelligent systems to structured and unstructured data sources.
+                </p>
+
+                <p className="text-gray-300 leading-relaxed">
+                  Currently, I am expanding my backend expertise by learning
+                  <span className="text-[rgb(var(--accent))] font-medium"> Python</span>,
+                  focusing on API development, system architecture fundamentals,
+                  and building scalable backend systems to strengthen my full-stack capabilities.
                 </p>
               </div>
             </motion.div>
@@ -102,12 +146,12 @@ const About = () => {
                   <div>
                     <h4 className="text-xl font-semibold mb-2">Education</h4>
                     <p className="text-[rgb(var(--accent))] font-medium">
-                      Bachelor of Computer Sciences
+                      Bachelor in Computer Sciences
                     </p>
                     <p className="text-gray-400 text-sm">
-                      Institute of Management Sciences Peshawar
+                      Karakoram International University Gilgit
                     </p>
-                    <p className="text-gray-500 text-sm">2017 - 2021</p>
+                    <p className="text-gray-500 text-sm">2021 - 2025</p>
                   </div>
                 </div>
               </div>
@@ -141,7 +185,7 @@ const About = () => {
                       </div>
                       <div>
                         <div className="flex justify-between mb-1">
-                          <span className="text-gray-300">Hunza</span>
+                          <span className="text-gray-300">Shina</span>
                           <span className="text-[rgb(var(--accent))]">Native</span>
                         </div>
                         <div className="h-2 bg-[rgb(var(--background))] rounded-full overflow-hidden">
@@ -165,13 +209,9 @@ const About = () => {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        'Tech Innovations',
-                        'Camping',
-                        'Trail Tracking',
-                        'Cricket',
                         'Badminton',
-                        'Swimming',
-                        'Paragliding',
+                        'Reading',
+                        'Trading',
                       ].map((hobby, index) => (
                         <span
                           key={index}
@@ -181,6 +221,7 @@ const About = () => {
                         </span>
                       ))}
                     </div>
+
                   </div>
                 </div>
               </div>

@@ -21,15 +21,21 @@ import {
   SiSupabase,
   SiSqlite,
   SiOpenai,
-  SiPython,
   SiZapier,
   SiDocker,
   SiGit,
   SiGithubactions,
   SiNginx,
   SiLinux,
+  SiFirebase,
+  SiTailwindcss,
+  SiMui,
+  SiShadcnui,
+  SiVectorlogozone,
+  SiPython
 } from 'react-icons/si';
 import { IconType } from 'react-icons';
+import { GiArtificialIntelligence } from "react-icons/gi";
 
 interface SkillCategory {
   title: string;
@@ -38,13 +44,37 @@ interface SkillCategory {
 
 const skillsData: SkillCategory[] = [
   {
+    title: 'Frontend Development',
+    skills: [
+      { name: 'React.js', icon: SiReact, color: '#61DAFB' },
+      { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
+      { name: 'MUI', icon: SiMui, color: '#007FFF' },
+      { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
+      { name: 'Shadcn UI', icon: SiShadcnui, color: '#000000' },
+      { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
+      { name: 'CSS3', icon: SiCss3, color: '#1572B6' },
+    ],
+  },
+  {
+    title: 'Agentic AI & LLM Development',
+    skills: [
+      { name: "LangChain", icon: SiPython, color: "#3776AB" },
+      { name: 'LangGraph', icon: SiPython, color: '#3776AB' },
+      { name: 'RAG', icon: SiPython, color: '#3776AB' },
+      { name: 'Vector Search', icon: SiVectorlogozone, color: '#3776AB' },
+      { name: 'AI Chatbot Development', icon: GiArtificialIntelligence, color: '#3776AB' },
+      // { name: 'OpenAI', icon: SiOpenai, color: '#00A67E' },
+
+    ],
+  },
+  {
     title: 'Backend Development',
     skills: [
       { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
       { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
       { name: 'Express.js', icon: SiExpress, color: '#ffffff' },
       { name: 'NestJS', icon: SiNestjs, color: '#E0234E' },
-      { name: 'Fastify', icon: SiFastify, color: '#000000' },
+      { name: 'Python', icon: SiPython, color: '#3776AB' },
     ],
   },
   {
@@ -53,52 +83,31 @@ const skillsData: SkillCategory[] = [
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
       { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
-      { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' },
-      { name: 'SQLite', icon: SiSqlite, color: '#003B57' },
+      { name: 'Firebase', icon: SiFirebase, color: '#FF6B00' },
+      // { name: 'SQLite', icon: SiSqlite, color: '#003B57' },
     ],
   },
-  {
-    title: 'Frontend Development',
-    skills: [
-      { name: 'React.js', icon: SiReact, color: '#61DAFB' },
-      { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
-      { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
-      { name: 'CSS3', icon: SiCss3, color: '#1572B6' },
-      { name: 'Svelte', icon: SiSvelte, color: '#FF3E00' },
-    ],
-  },
-  {
-    title: 'AI & Automation',
-    skills: [
-      { name: 'OpenAI', icon: SiOpenai, color: '#00A67E' },
-      { name: 'LangChain', icon: SiPython, color: '#3776AB' },
-      { name: 'n8n', icon: SiNodedotjs, color: '#EA4B71' },
-      { name: 'Zapier', icon: SiZapier, color: '#FF4F00' },
-      { name: 'GoHighLevel', icon: SiNodedotjs, color: '#9333EA' },
-    ],
-  },
-  {
-    title: 'DevOps & Infrastructure',
-    skills: [
-      { name: 'Docker', icon: SiDocker, color: '#2496ED' },
-      { name: 'Linux', icon: SiLinux, color: '#FCC624' },
-      { name: 'Nginx', icon: SiNginx, color: '#009639' },
-      { name: 'Git', icon: SiGit, color: '#F05032' },
-      { name: 'GitHub Actions', icon: SiGithubactions, color: '#2088FF' },
-    ],
-  },
+
+
+  // {
+  //   title: 'DevOps & Infrastructure',
+  //   skills: [
+  //     { name: 'Docker', icon: SiDocker, color: '#2496ED' },
+  //     { name: 'Linux', icon: SiLinux, color: '#FCC624' },
+  //     { name: 'Nginx', icon: SiNginx, color: '#009639' },
+  //     { name: 'Git', icon: SiGit, color: '#F05032' },
+  //     { name: 'GitHub Actions', icon: SiGithubactions, color: '#2088FF' },
+  //   ],
+  // },
 ];
 
 const additionalSkills = [
-  'REST API Design',
-  'Prisma ORM',
-  'TypeORM',
-  'Sequelize',
-  'CI/CD Pipelines',
-  'GitLab CI',
-  'Server Deployment',
-  'Cloud Infrastructure',
-  'SEO Optimization',
+  'Prompt Engineering',
+  'Memory Handling in AI Agents',
+  'Workflow-based AI Systems',
+  'Semantic Search',
+  'Context Management in LLMs',
+  'Large Language Models (LLMs)',
 ];
 
 const Skills = () => {
@@ -146,7 +155,7 @@ const Skills = () => {
           </motion.div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {skillsData.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
@@ -208,14 +217,10 @@ const Skills = () => {
                 {[
                   'Slack',
                   'Trello',
-                  'Linear',
-                  'Jira',
+                  'Github',
+                  'Git',
                   'Skype',
                   'Zoom',
-                  'Microsoft Teams',
-                  'Workfront',
-                  'Sharepoint',
-                  'Plane',
                 ].map((tool, index) => (
                   <span
                     key={index}

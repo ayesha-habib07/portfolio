@@ -16,48 +16,56 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    company: 'UCONNECT TECHNOLOGIES PAKISTAN',
-    role: 'Full Stack Developer',
+    company: 'PINE TECHNOLOGIES',
+    role: 'Full Stack Developer/ Agentic Chatbot Developer',
     location: 'Gilgit, Pakistan',
-    period: 'Dec 2021 - Present',
+    period: 'Aug 2025 - Present',
     type: 'Full-time',
     current: true,
   },
   {
-    company: 'QUOHR',
-    role: 'Lead Backend Developer',
+    company: 'Karakoram International University',
+    role: 'Student Assistant',
     location: 'Gilgit, Pakistan',
-    period: 'Jan 2024 - May 2025',
+    period: 'Aug 2024 - Dec 2024',
+    type: 'Full-time',
+
+  },
+  {
+    company: 'NorthCodeX',
+    role: 'Frontend Developer',
+    location: 'Gilgit, Pakistan',
+    period: 'Dec 2023 - July 2024',
     type: 'Full-time',
   },
   {
-    company: 'QUINTUS VOYAGES',
-    role: 'Full Stack Developer',
-    location: 'Gojal Hunza, Pakistan',
-    period: 'Jan 2024 - Apr 2025',
-    type: 'Contract',
-  },
-  {
-    company: 'GILGIT APP',
-    role: 'Backend Developer',
+    company: 'Cologix',
+    role: 'Frontend Developer',
     location: 'Gilgit, Pakistan',
-    period: 'Oct 2023 - Feb 2024',
-    type: 'Contract',
-  },
-  {
-    company: 'INVYCE.COM',
-    role: 'Backend Developer',
-    location: 'Gilgit, Pakistan',
-    period: 'Oct 2021 - Jun 2023',
-    type: 'Contract',
-  },
-  {
-    company: 'SKYSCRAPERS PVT LTD',
-    role: 'SEO Executive',
-    location: 'Islamabad, Pakistan',
-    period: 'Sep 2021 - Nov 2021',
+    period: 'Nov 2022 - April 2023',
     type: 'Full-time',
   },
+  // {
+  //   company: 'GILGIT APP',
+  //   role: 'Backend Developer',
+  //   location: 'Gilgit, Pakistan',
+  //   period: 'Oct 2023 - Feb 2024',
+  //   type: 'Contract',
+  // },
+  // {
+  //   company: 'INVYCE.COM',
+  //   role: 'Backend Developer',
+  //   location: 'Gilgit, Pakistan',
+  //   period: 'Oct 2021 - Jun 2023',
+  //   type: 'Contract',
+  // },
+  // {
+  //   company: 'SKYSCRAPERS PVT LTD',
+  //   role: 'SEO Executive',
+  //   location: 'Islamabad, Pakistan',
+  //   period: 'Sep 2021 - Nov 2021',
+  //   type: 'Full-time',
+  // },
 ];
 
 const Experience = () => {
@@ -124,7 +132,7 @@ const Experience = () => {
                 <div className="card-gradient rounded-2xl p-6 border border-[rgb(var(--border))] h-full relative overflow-hidden transition-all duration-300 hover:border-[rgb(var(--accent))]/50">
                   {/* Background glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[rgb(var(--accent))]/0 to-[rgb(var(--accent))]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
+
                   {/* Top section with badges */}
                   <div className="relative z-10 flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -186,7 +194,7 @@ const Experience = () => {
               <div className="text-sm text-gray-400">Positions</div>
             </div>
             <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">
-              <div className="text-3xl font-bold text-gradient mb-1">4+</div>
+              <div className="text-3xl font-bold text-gradient mb-1">2+</div>
               <div className="text-sm text-gray-400">Years</div>
             </div>
             <div className="card-gradient rounded-xl p-6 border border-[rgb(var(--border))] text-center">

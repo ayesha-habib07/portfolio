@@ -36,19 +36,19 @@ const Contact = () => {
     {
       icon: FiMail,
       label: 'Email',
-      value: 'arifkoyani@gmail.com',
-      href: 'mailto:arifkoyani@gmail.com',
+      value: 'ayeshahabib465@gmail.com',
+      href: 'mailto:ayeshahabib465@gmail.com',
     },
     {
       icon: FiPhone,
       label: 'Phone',
-      value: '+92 3188278882',
-      href: 'tel:+923010104990',
+      value: '+92 3555803561',
+      href: 'tel:+92408550080',
     },
     {
       icon: FiMapPin,
       label: 'Location',
-      value: 'Hunza Ganish, Pakistan',
+      value: 'Gilgit, Pakistan',
       href: null,
     },
   ];
@@ -57,37 +57,37 @@ const Contact = () => {
     {
       icon: FiGithub,
       label: 'GitHub',
-      href: 'https://github.com/arifkoyani',
+      href: 'https://github.com/ayesha-habib07',
       color: '#ffffff',
     },
     {
       icon: FiLinkedin,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/arif-ali-koyani-2b1413261/',
+      href: 'https://www.linkedin.com/in/ayesha-habib-5ba15225a/',
       color: '#0077B5',
     },
-    {
-      icon: SiFiverr,
-      label: 'Fiverr',
-      href: 'https://www.fiverr.com/arifkoyani',
-      color: '#1DBF73',
-    },
-    {
-      icon: FiInstagram,
-      label: 'Instagram',
-      href: 'https://www.instagram.com/arifkoyani/',
-      color: '#E4405F',
-    },
+    // {
+    //   icon: SiFiverr,
+    //   label: 'Fiverr',
+    //   href: 'https://www.fiverr.com/arifkoyani',
+    //   color: '#1DBF73',
+    // },
+    // {
+    //   icon: FiInstagram,
+    //   label: 'Instagram',
+    //   href: 'https://www.instagram.com/arifkoyani/',
+    //   color: '#E4405F',
+    // },
     {
       icon: FaWhatsapp,
       label: 'WhatsApp',
-      href: 'https://wa.me/923188278882',
+      href: 'https://wa.me/03555803561',
       color: '#25D366',
     },
     {
       icon: FiMail,
       label: 'Email',
-      href: 'mailto:arifkoyani@gmail.com',
+      href: 'mailto:ayeshahabib465@gmail.com',
       color: '#01c16a',
     },
   ];
@@ -180,9 +180,9 @@ const Contact = () => {
                     Let's Work <span className="text-gradient">Together</span>
                   </h3>
                   <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
-                    If you're working on something interesting or need help building 
-                    a backend system that actually works, let's talk. I'm open to 
-                    full-time roles, contract projects, or freelance work — whatever 
+                    If you're working on something interesting or need help building
+                    a backend system that actually works, let's talk. I'm open to
+                    full-time roles, contract projects, or freelance work — whatever
                     fits your needs.
                   </p>
 
@@ -215,8 +215,8 @@ const Contact = () => {
                     Send Me an Email
                   </a>
                   <a
-                    href="/cv.pdf"
-                    download="Arif_Ali_CV.pdf"
+                    href="/CVV.pdf"
+                    download="Ayesha_Habib_CV.pdf"
                     className="flex items-center justify-center gap-2 w-full py-3 sm:py-4 border-2 border-[rgb(var(--accent))] text-[rgb(var(--accent))] rounded-lg text-sm sm:text-base font-semibold hover:bg-[rgb(var(--accent))] hover:text-[rgb(var(--background))] transition-all duration-300 hover:-translate-y-1"
                   >
                     <FiDownload className="w-4 h-4 sm:w-5 sm:h-5" />

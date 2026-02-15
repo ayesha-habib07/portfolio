@@ -6,6 +6,8 @@ import { useRef } from 'react';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import Image from 'next/image';
 import ExpandableText from './ExpandableText';
+import Link from 'next/link';
+
 
 interface Project {
   title: string;
@@ -19,14 +21,33 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "AI-Powered Recipe Generator using LangGraph",
+    period: "Dec 2025 - Jan 2026",
+    description: "Built an AI-powered recipe generator that creates structured recipes based on user inputs like ingredients, category (veg/non-veg), and allergens. Implemented LangGraph to manage multi-step LLM workflows and integrated it with a Next.js frontend for a smooth user experience.",
+    technologies: ["LangGraph", "Large Language Models (LLM)", "Prompt Engineering", "Next.js", "TypeScript", "API Integration", "State Management", "AI Workflow Orchestration"],
+    link: "https://recipegeneratorlanggraph.netlify.app/",
+    image: "/images/projects/langgraph-recipe.png",
+    status: "completed",
+  },
+  {
+    title: 'Cocaine Energy Suppliment',
+    period: 'Sep 2025 - Nov 2025',
+    description:
+      'Built a full-stack e-commerce platform with role-based access control, admin approval workflows, dynamic pricing tiers, and guest checkout. Implemented secure authentication, email verification, and an admin dashboard for managing users, products, and orders. Utilized React, TypeScript, Supabase, and the Google Maps API for dynamic and responsive user experience.',
+    technologies: ['React', 'Redux Toolkit', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'JWT Authentication'],
+    link: 'https://drinkcocaine.com/',
+    image: '/images/projects/cocaine.png',
+    status: 'completed',
+  },
+  {
     title: '1800AUTOTOW.COM',
     period: 'Apr 2025 - Present',
     description:
-      'Built a full-stack roadside assistance web application featuring real-time provider matching, GPS-based service requests, a bidding system, and multi-channel notifications. Utilized React, TypeScript, Supabase, and the Google Maps API for dynamic and responsive user experience.',
+      'Built a full-stack roadside assistance web application featuring real-time provider matching, GPS-based service requests, a bidding system, and multi-channel notifications.',
     technologies: ['React', 'TypeScript', 'Supabase', 'Google Maps API', 'Real-time'],
     link: 'https://1800autotow.com',
     image: '/images/projects/autotow.webp',
-    status: 'ongoing',
+    status: 'completed',
   },
   {
     title: 'MBAROOFING',
@@ -48,11 +69,56 @@ const projects: Project[] = [
     image: '/images/projects/theo-ai.webp',
     status: 'completed',
   },
-];
 
-const Projects = () => {
+  {
+    title: 'Bizviz - Real-Time Exploration Platform',
+    period: 'Sep 2025 - Aug 2025',
+    description: 'Developed the responsive frontend of Bizvis using Next.js and Tailwind CSS, translating Figma designs into a modern, interactive web experience. The platform allows users to explore restaurants, gyms, events, and more in real time, while helping businesses showcase their spaces and attract customers efficiently.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Responsive UI Design'],
+    link: 'https://bizvis-awd8.vercel.app/',
+    image: '/images/projects/bizviz.png',
+    status: 'completed',
+
+  },
+  {
+    title: 'Kobba & Co – Expert Legal Solutions',
+    period: 'Apr 2025 - March 2025',
+    description: 'A React frontend for a legal services platform, providing users with clear, trustworthy information about attorneys and the legal process. Designed a responsive and user-friendly interface to ensure usability and transparency.',
+    technologies: ['React', 'JavaScript (ES6+)', 'Tailwind CSS', 'Responsive UI Design'],
+    link: 'https://kck-gamma.vercel.app/',
+    image: '/images/projects/kck.png',
+    status: 'completed',
+  },
+  {
+    title: 'Global Trade Made Simple',
+    period: 'March 2025 - April 2025',
+    description: 'Designed and built the responsive frontend UI for a full-stack web app that streamlines international trade. The platform helps users manage import/export operations, track shipments, and handle customs documentation efficiently.',
+    technologies: ['React', 'JavaScript (ES6+)', 'Tailwind CSS', 'Responsive UI Design'],
+    link: 'https://cargo-tracking.netlify.app/',
+    image: '/images/projects/cargo.png',
+    status: 'completed',
+  },
+
+  {
+    title: 'Learn Anything – Online Education Platform',
+    period: 'Feb 2025 - March 2025',
+    description: 'Created the responsive frontend UI for an online education website using React and Tailwind CSS. The platform showcases online courses, certificate programs, and expert-led learning, providing an engaging and user-friendly experience for learners.',
+    technologies: ['React', 'JavaScript (ES6+)', 'Tailwind CSS', 'Responsive UI Design'],
+    link: 'https://educational-react.netlify.app/',
+    image: '/images/projects/educational.png',
+    status: 'completed',
+  }
+];
+interface ProjectsProps {
+  limit?: number;
+  showButton?: boolean;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ limit, showButton = true }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -74,6 +140,7 @@ const Projects = () => {
       },
     },
   };
+  const displayedProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
     <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6 relative" ref={ref}>
@@ -96,7 +163,7 @@ const Projects = () => {
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {displayedProjects.map((project, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -107,11 +174,10 @@ const Projects = () => {
                   {project.status && (
                     <div className="absolute top-4 right-4 z-20">
                       <span
-                        className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                          project.status === 'ongoing'
-                            ? 'bg-[rgb(var(--accent))]/20 text-[rgb(var(--accent))] border border-[rgb(var(--accent))]/30'
-                            : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'
-                        }`}
+                        className={`px-3 py-1 text-xs font-semibold rounded-full ${project.status === 'ongoing'
+                          ? 'bg-[rgb(var(--accent))]/20 text-[rgb(var(--accent))] border border-[rgb(var(--accent))]/30'
+                          : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'
+                          }`}
                       >
                         {project.status === 'ongoing' ? 'Ongoing' : 'Completed'}
                       </span>
@@ -178,9 +244,22 @@ const Projects = () => {
                     )}
                   </div>
                 </div>
+
+
               </motion.div>
             ))}
           </div>
+          {/* Show More Button */}
+          {limit && showButton && projects.length > limit && (
+            <div className="mt-12 text-center">
+              <Link href="/pages/projects">
+                <button className="cursor-pointer px-6 py-3 bg-[rgb(var(--accent))] text-white font-semibold rounded-lg hover:bg-emerald-400 transition-colors">
+                  Show More Projects
+                </button>
+              </Link>
+            </div>
+          )}
+
         </motion.div>
       </div>
     </section>

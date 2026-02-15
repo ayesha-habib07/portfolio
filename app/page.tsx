@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Experience />
-      <Projects />
+      <Projects limit={3} showButton={true} />
       <Skills />
       <Contact />
       <Footer />
