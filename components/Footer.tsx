@@ -24,7 +24,7 @@ const Footer = () => {
           </motion.p>
 
           {/* Made with love */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -45,7 +45,7 @@ const Footer = () => {
             </motion.div>
             <span className="hidden sm:inline">using</span>
             <span>Next.js & Framer Motion</span>
-          </motion.div>
+          </motion.div> */}
 
           {/* Quick Links */}
           <motion.div

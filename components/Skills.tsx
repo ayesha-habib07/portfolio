@@ -32,7 +32,9 @@ import {
   SiMui,
   SiShadcnui,
   SiVectorlogozone,
-  SiPython
+  SiPython,
+  SiPinescript,
+
 } from 'react-icons/si';
 import { IconType } from 'react-icons';
 import { GiArtificialIntelligence } from "react-icons/gi";
@@ -82,9 +84,10 @@ const skillsData: SkillCategory[] = [
     skills: [
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+      { name: 'Pinecone', icon: SiPinescript, color: '#003B57' },
       { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
       { name: 'Firebase', icon: SiFirebase, color: '#FF6B00' },
-      // { name: 'SQLite', icon: SiSqlite, color: '#003B57' },
+      { name: 'Supabase', icon: SiVectorlogozone, color: '#003B57' },
     ],
   },
 

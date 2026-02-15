@@ -41,7 +41,7 @@ const projects: Project[] = [
   },
   {
     title: '1800AUTOTOW.COM',
-    period: 'Apr 2025 - Present',
+    period: 'Apr 2025 - March 2025',
     description:
       'Built a full-stack roadside assistance web application featuring real-time provider matching, GPS-based service requests, a bidding system, and multi-channel notifications.',
     technologies: ['React', 'TypeScript', 'Supabase', 'Google Maps API', 'Real-time'],

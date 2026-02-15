@@ -9,12 +9,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ayesha Habib - Full Stack Developer",
+  title: "Ayesha Habib - Frontend Developer",
   description: "Frontend developer with 2+ years of experience architecting scalable server-side solutions. Specializing in Node.js ecosystems, React.js, and modern web technologies.",
-  keywords: ["Full Stack Developer", "Frontend Developer", "Node.js", "React", "Next.js", "TypeScript", "MongoDB", "PostgreSQL"],
+  keywords: ["Frontend Developer", "Node.js", "React", "Next.js", "TypeScript", "MongoDB", "PostgreSQL"],
   authors: [{ name: "Ayesha Habib" }],
   openGraph: {
-    title: "Ayesha Habib - Full Stack Developer",
+    title: "Ayesha Habib - Frontend Developer",
     description: "Frontend developer with 2+ years of experience architecting scalable server-side solutions. Specializing in Node.js ecosystems, React.js, and modern web technologies.",
     type: "website",
   },
