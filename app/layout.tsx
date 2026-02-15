@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   display: 'swap',
   variable: '--font-inter'
 });
 
 export const metadata: Metadata = {
-  title: "Arif ali koyani - Full Stack Developer",
-  description: "Seasoned backend developer with 3+ years of experience architecting scalable server-side solutions. Specializing in Node.js ecosystems, React.js, and modern web technologies.",
-  keywords: ["Full Stack Developer", "Backend Developer", "Node.js", "React", "Next.js", "TypeScript", "MongoDB", "PostgreSQL"],
-  authors: [{ name: "Arif ali koyani" }],
+  title: "Ayesha Habib - Full Stack Developer",
+  description: "Frontend developer with 2+ years of experience architecting scalable server-side solutions. Specializing in Node.js ecosystems, React.js, and modern web technologies.",
+  keywords: ["Full Stack Developer", "Frontend Developer", "Node.js", "React", "Next.js", "TypeScript", "MongoDB", "PostgreSQL"],
+  authors: [{ name: "Ayesha Habib" }],
   openGraph: {
-    title: "Arif ali koyani - Full Stack Developer",
-    description: "Seasoned software developer with 3+ years of experience",
+    title: "Ayesha Habib - Full Stack Developer",
+    description: "Frontend developer with 2+ years of experience architecting scalable server-side solutions. Specializing in Node.js ecosystems, React.js, and modern web technologies.",
     type: "website",
   },
 };
